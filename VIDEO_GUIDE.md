@@ -41,15 +41,49 @@ Search "Wan 2.2" or "LTX-Video", upload a reference photo (image-to-video), ~$0.
 ## Option C — Real footage (most trustworthy for a faith brand)
 A 10–20 second phone clip of an actual hawan or tikka. Authentic, free, no AI artifacts.
 
-## Image-to-video prompt templates
-- **Hawan:** "Close-up of hands offering samagri into a sacred hawan fire, warm flickering
-  flames, rising smoke, marigold flowers, soft morning light, cinematic, shallow depth of
-  field, slow motion, photorealistic."
-- **Tikka:** "Gentle close-up of a thumb applying red tilak / chandan tikka to a forehead,
-  soft natural light, serene and respectful, cinematic, photorealistic."
+## Prompts for the clips (copy-paste)
+Best results: **image-to-video** from a real reference photo — the prompt then guides the
+motion/mood. Generate several 5–8 s clips and we'll sequence them into a montage.
 
-Keep clips 5–10 s, review for hand/face/fire artifacts, and prefer image-to-video from a
-real photo for the most realistic, authentic result.
+**1. Hawan — offering samagri**
+> Cinematic close-up of devout hands offering hawan samagri into a sacred fire in a copper
+> havan kund, golden flames flickering, thin fragrant smoke rising slowly, marigold flowers
+> and a brass diya beside it, warm soft morning light, shallow depth of field, gentle slow
+> motion, photorealistic, 4k.
+
+**2. Hawan — flames & smoke**
+> Macro shot of a sacred hawan fire, glowing embers and amber flames rising, delicate smoke
+> curling upward against a softly blurred temple background, marigold petals, warm cinematic
+> lighting, slow graceful motion, photorealistic.
+
+**3. Tikka — roli/kumkum**
+> Serene close-up of a thumb gently applying a red roli/kumkum tilak to a calm person's
+> forehead, soft natural window light, a brass aarti thali with diya blurred behind,
+> respectful devotional mood, subtle motion, cinematic, photorealistic.
+
+**4. Chandan tilak — detail**
+> Close-up of fingers applying smooth sandalwood (chandan) tilak in a vertical line on a
+> forehead, fine texture, soft warm light, peaceful, shallow depth of field, gentle motion,
+> photorealistic.
+
+**5. Attar (your product)**
+> Elegant close-up of a hand tilting a small glass attar bottle, a single golden drop of
+> attar oil on a fingertip, soft studio light, warm bokeh, slow refined motion, luxury
+> fragrance feel, photorealistic.
+
+**6. Diya / pooja ambient**
+> Close-up of a brass oil diya flame flickering gently in a dim temple, soft incense smoke
+> drifting, marigold garland blurred behind, warm golden glow, calm slow motion, photorealistic.
+
+**Negative prompt (use on every clip):**
+> deformed hands, extra fingers, missing fingers, mutated limbs, distorted face, blurry, low
+> quality, jpeg artifacts, watermark, text, captions, logo, cartoon, anime, plastic,
+> oversaturated, harsh flicker, warped objects, duplicated objects, glitch.
+
+**Settings (RTX 3070 / 8 GB):** 5–8 s, ~24 fps, 720p (e.g. 1280×704); camera = "static" or
+"slow push-in"; generate 2–3 takes per prompt and keep the best. Use the **same reference
+photo style/lighting** across clips so the montage flows. Review every clip for hand/face/fire
+artifacts before using.
 
 ## Go live (already wired)
 **Getting the clip from the RTX laptop to here:** if that laptop is signed into the same
