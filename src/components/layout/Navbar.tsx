@@ -9,6 +9,7 @@ import MobileMenu from "./MobileMenu";
 import SearchBar from "@/components/ui/SearchBar";
 
 const navLinks = [
+  { href: "/", labelEn: "Home", labelHi: "होम" },
   { href: "/shop", labelEn: "Shop", labelHi: "दुकान" },
   { href: "/kits", labelEn: "Pooja Kits", labelHi: "पूजा किट" },
   { href: "/about", labelEn: "Our Story", labelHi: "हमारी कहानी" },

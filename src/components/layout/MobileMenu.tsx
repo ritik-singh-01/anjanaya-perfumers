@@ -59,14 +59,6 @@ export default function MobileMenu({ isOpen, onClose, links }: MobileMenuProps) 
 
           {/* Links */}
           <nav className="flex-1 py-4">
-            <Link
-              href="/"
-              onClick={onClose}
-              className="flex items-center gap-3 px-6 py-3.5 text-on-surface hover:bg-surface-container-low transition-colors"
-            >
-              <span className="material-symbols-outlined text-primary">home</span>
-              <span className="font-medium">{t("Home", "होम")}</span>
-            </Link>
             {links.map((link) => (
               <Link
                 key={link.href}
@@ -75,7 +67,9 @@ export default function MobileMenu({ isOpen, onClose, links }: MobileMenuProps) 
                 className="flex items-center gap-3 px-6 py-3.5 text-on-surface hover:bg-surface-container-low transition-colors"
               >
                 <span className="material-symbols-outlined text-primary">
-                  {link.href === "/shop"
+                  {link.href === "/"
+                    ? "home"
+                    : link.href === "/shop"
                     ? "storefront"
                     : link.href === "/kits"
                     ? "inventory_2"
