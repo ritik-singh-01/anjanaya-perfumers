@@ -27,7 +27,7 @@ export function getProductWhatsAppMessage(
   productName: string,
   price: number
 ): string {
-  return `Hi! I'd like to enquire about *${productName}* (${formatPrice(price)}) at Anjanaya Perfumers. Could you share more details and availability?`;
+  return `Hi! I'd like to enquire about *${productName}* (${formatPrice(price)}) at Shri Anjaneya. Could you share more details and availability?`;
 }
 
 export function cn(...classes: (string | boolean | undefined | null)[]): string {

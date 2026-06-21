@@ -24,8 +24,8 @@ const firaSans = Fira_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Anjanaya Perfumers — Authentic Pooja Samagri & Attars | अंजनाया परफ्यूमर्स",
-    template: "%s | Anjanaya Perfumers",
+    default: "Shri Anjaneya — Authentic Pooja Samagri & Attars | श्री अंजनेय",
+    template: "%s | Shri Anjaneya",
   },
   description:
     "Discover authentic pooja samagri, hawan samagri, chandan, gulab jal, dhoop, loban, and traditional attars — handcrafted with devotion. Browse our collection and enquire on WhatsApp.",
@@ -39,22 +39,22 @@ export const metadata: Metadata = {
     "attar perfume",
     "loban dhoop",
     "pooja items near me",
-    "anjanaya perfumers",
+    "shri anjaneya",
     "पूजा सामग्री",
     "हवन सामग्री",
   ],
-  authors: [{ name: "Anjanaya Perfumers" }],
+  authors: [{ name: "Shri Anjaneya" }],
   openGraph: {
     type: "website",
     locale: "en_IN",
-    siteName: "Anjanaya Perfumers",
-    title: "Anjanaya Perfumers — Authentic Pooja Samagri & Attars",
+    siteName: "Shri Anjaneya",
+    title: "Shri Anjaneya — Authentic Pooja Samagri & Attars",
     description:
       "Authentic pooja samagri, hawan items, chandan, gulab jal, and traditional attars. Trusted quality since generations.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Anjanaya Perfumers — Authentic Pooja Samagri & Attars",
+    title: "Shri Anjaneya — Authentic Pooja Samagri & Attars",
     description:
       "Authentic pooja samagri, hawan samagri & traditional attars — handcrafted with devotion. Browse and enquire on WhatsApp.",
   },

@@ -33,7 +33,7 @@ export default function TermsPage() {
         <p>{siteConfig.name} shall not be liable for any indirect, incidental, or consequential damages arising from the use of our products or website.</p>
 
         <h2 className="text-xl font-bold text-on-surface">Governing Law</h2>
-        <p>These terms are governed by the laws of India. Any disputes shall be subject to the jurisdiction of courts in Gurgaon, Haryana.</p>
+        <p>These terms are governed by the laws of India. Any disputes shall be subject to the jurisdiction of courts in Kannauj, Uttar Pradesh.</p>
 
         <h2 className="text-xl font-bold text-on-surface">Contact</h2>
         <p>For queries regarding these terms, contact us at {siteConfig.email}.</p>

@@ -29,13 +29,13 @@ export default function AboutPage() {
         </h2>
         <p className="text-on-surface-variant leading-relaxed mb-6">
           {t(
-            "Anjanaya Perfumers is built on a foundation of generations of expertise in crafting authentic pooja samagri, traditional attars, and sacred ritual items. What started as a trusted local shop has now expanded to serve devotees across India through our online platform.",
-            "अंजनाया परफ्यूमर्स पीढ़ियों की विशेषज्ञता की नींव पर बना है — प्रामाणिक पूजा सामग्री, पारंपरिक अत्तर, और पवित्र अनुष्ठान सामान बनाने में। जो एक विश्वसनीय स्थानीय दुकान के रूप में शुरू हुआ, अब हमारे ऑनलाइन प्लेटफ़ॉर्म के माध्यम से पूरे भारत के भक्तों की सेवा कर रहा है।"
+            "Shri Anjaneya is built on generations of expertise in crafting authentic pooja samagri, traditional attars, and sacred ritual items in Kannauj — India's perfume capital. What began as a trusted local name now showcases its collection online for devotees across India.",
+            "श्री अंजनेय पीढ़ियों की विशेषज्ञता की नींव पर बना है — कन्नौज में प्रामाणिक पूजा सामग्री, पारंपरिक अत्तर, और पवित्र अनुष्ठान सामान। जो एक विश्वसनीय स्थानीय नाम के रूप में शुरू हुआ, अब अपना संग्रह ऑनलाइन प्रदर्शित कर रहा है।"
           )}
         </p>
 
         <h2 className="text-2xl font-[family-name:var(--font-headline)] font-bold mb-4">
-          {t("Why Choose Anjanaya?", "अंजनाया क्यों चुनें?")}
+          {t("Why Choose Shri Anjaneya?", "श्री अंजनेय क्यों चुनें?")}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           {[
@@ -59,7 +59,7 @@ export default function AboutPage() {
           {[
             { en: "Freshness Guarantee — especially for dhoop, agarbatti, and chandan products", hi: "ताज़गी की गारंटी — विशेषकर धूप, अगरबत्ती और चंदन उत्पादों के लिए" },
             { en: "Safe packaging for glass items (gulab jal, attar bottles) with thermocol inserts", hi: "काँच की वस्तुओं के लिए सुरक्षित पैकेजिंग" },
-            { en: "Easy returns within 7 days if product is sealed and unused", hi: "7 दिनों के भीतर आसान वापसी अगर उत्पाद सीलबंद और अप्रयुक्त है" },
+            { en: "Honest advice — we help you choose exactly what your ritual needs", hi: "ईमानदार सलाह — हम आपकी पूजा के लिए सही सामग्री चुनने में मदद करते हैं" },
             { en: "Responsive WhatsApp support — we reply within 2 hours", hi: "उत्तरदायी व्हाट्सएप सहायता — हम 2 घंटे में जवाब देते हैं" },
           ].map((item, i) => (
             <li key={i} className="flex items-start gap-3">

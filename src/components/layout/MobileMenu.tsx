@@ -91,7 +91,7 @@ export default function MobileMenu({ isOpen, onClose, links }: MobileMenuProps) 
           {/* Footer */}
           <div className="p-4 border-t border-outline-variant/20 bg-surface-container-low">
             <a
-              href="https://wa.me/918169638918?text=Hi!%20I'd%20like%20to%20know%20more%20about%20Anjanaya%20Perfumers'%20collection."
+              href="https://wa.me/918169638918?text=Hi!%20I'd%20like%20to%20know%20more%20about%20Shri%20Anjaneya's%20collection."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 bg-whatsapp text-white py-3 rounded-lg font-bold text-sm w-full hover:opacity-90 transition-opacity"

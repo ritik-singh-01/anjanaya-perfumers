@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { siteConfig } from "@/lib/siteConfig";
@@ -20,7 +21,7 @@ export default function Navbar() {
   const { t, toggleLanguage, language } = useLanguage();
 
   const enquireUrl = `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(
-    "Hi! I'd like to know more about Anjanaya Perfumers' collection."
+    "Hi! I'd like to know more about Shri Anjaneya's collection."
   )}`;
 
   return (
@@ -39,9 +40,17 @@ export default function Navbar() {
           <div className="flex items-center gap-8">
             <Link
               href="/"
-              className="text-xl md:text-2xl font-bold text-primary tracking-tighter font-[family-name:var(--font-headline)]"
+              className="flex items-center"
+              aria-label={t("Shri Anjaneya — Home", "श्री अंजनेय — होम")}
             >
-              {t("Anjanaya Perfumers", "अंजनाया परफ्यूमर्स")}
+              <Image
+                src="/images/logo.png"
+                alt="Shri Anjaneya"
+                width={1204}
+                height={580}
+                priority
+                className="h-10 w-auto md:h-12"
+              />
             </Link>
 
             {/* Desktop nav links */}

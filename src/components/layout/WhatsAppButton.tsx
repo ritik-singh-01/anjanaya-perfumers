@@ -3,7 +3,7 @@
 import { siteConfig } from "@/lib/siteConfig";
 
 export default function WhatsAppButton() {
-  const message = "Hi! I want to order pooja samagri from Anjanaya Perfumers. Please help.";
+  const message = "Hi! I'd like to enquire about pooja samagri from Shri Anjaneya. Please help.";
   const url = `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(message)}`;
 
   return (

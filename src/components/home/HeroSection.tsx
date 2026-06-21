@@ -23,8 +23,8 @@ interface Slide {
 const slides: Slide[] = [
   {
     image: "/images/banners/hero-banner.jpg",
-    eyebrowEn: "Anjanaya Perfumers",
-    eyebrowHi: "अंजनाया परफ्यूमर्स",
+    eyebrowEn: "Shri Anjaneya",
+    eyebrowHi: "श्री अंजनेय",
     titleEn: "Sacred scents, crafted with devotion",
     titleHi: "पवित्र सुगंध, श्रद्धा से रचित",
     subEn: "Traditional attars & authentic pooja samagri — a heritage of fragrance for your every ritual.",
@@ -75,7 +75,7 @@ export default function HeroSection() {
   }, [reduce, paused, count]);
 
   const enquireUrl = `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(
-    "Hi! I'd like to know more about Anjanaya Perfumers' collection."
+    "Hi! I'd like to know more about Shri Anjaneya's collection."
   )}`;
 
   const active = slides[index];

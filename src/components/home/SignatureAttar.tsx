@@ -39,7 +39,7 @@ export default function SignatureAttar() {
             {t("Our Signature", "हमारी पहचान")}
           </p>
           <h2 className="display-serif mb-5 text-4xl text-inverse-primary md:text-5xl">
-            {t("The Anjanaya Attar", "अंजनाया अत्तर")}
+            {t("The Anjaneya Attar", "अंजनेय अत्तर")}
           </h2>
           <p className="mb-8 leading-relaxed text-inverse-on-surface/75">
             {t(

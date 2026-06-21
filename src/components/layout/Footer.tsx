@@ -105,7 +105,7 @@ export default function Footer() {
 
             {/* WhatsApp CTA */}
             <a
-              href={`https://wa.me/${siteConfig.whatsapp}?text=Hi!%20I%20want%20to%20know%20more%20about%20Anjanaya%20Perfumers`}
+              href={`https://wa.me/${siteConfig.whatsapp}?text=Hi!%20I%20want%20to%20know%20more%20about%20Shri%20Anjaneya`}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 flex items-center justify-center gap-2 bg-whatsapp text-white py-2.5 rounded-lg font-bold text-sm w-full hover:opacity-90 transition-opacity"
