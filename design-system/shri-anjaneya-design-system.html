@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shri Anjaneya — Design System</title>
+<style>
+  :root{
+    --primary:#a73400; --primary-container:#d14300; --primary-fixed:#ffdbd0; --primary-fixed-dim:#ffb59d;
+    --on-primary:#ffffff; --secondary:#904d00; --secondary-container:#fe932c;
+    --background:#fff8f2; --surface-container-lowest:#ffffff; --surface-container-low:#fdf2e4;
+    --surface-container:#f7ecde; --surface-container-high:#f1e7d9;
+    --on-surface:#201b13; --on-surface-variant:#5c4037; --outline:#907065; --outline-variant:#e5beb2;
+    --error:#ba1a1a; --whatsapp:#25D366;
+    --font-head:"Marcellus", Georgia, "Times New Roman", serif;
+    --font-body:"Fira Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--background);color:var(--on-surface);font-family:var(--font-body);line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:48px 24px 80px}
+  .head h1{font-family:var(--font-head);font-size:clamp(40px,7vw,68px);letter-spacing:.01em;line-height:1.05}
+  .head .accent{color:var(--primary);font-style:italic}
+  .head p{color:var(--on-surface-variant);margin-top:14px;max-width:640px;font-size:18px}
+  .eyebrow{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--primary);font-weight:600;margin-bottom:10px}
+  section{margin-top:64px}
+  h2.sec{font-family:var(--font-head);font-size:30px;letter-spacing:-.005em;border-bottom:1px solid var(--outline-variant);padding-bottom:12px;margin-bottom:28px}
+  /* color swatches */
+  .swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px}
+  .sw{border:1px solid var(--outline-variant);border-radius:16px;overflow:hidden;background:var(--surface-container-lowest)}
+  .sw .chip{height:78px}
+  .sw .meta{padding:10px 12px}
+  .sw .name{font-weight:600;font-size:13px}
+  .sw .hex{color:var(--on-surface-variant);font-size:12px;font-family:ui-monospace,monospace;text-transform:uppercase}
+  /* type scale */
+  .type div{margin-bottom:18px}
+  .type .lbl{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--on-surface-variant)}
+  .d1{font-family:var(--font-head);font-size:56px;line-height:1.05}
+  .d2{font-family:var(--font-head);font-size:38px}
+  .d3{font-family:var(--font-head);font-size:26px}
+  .body-lg{font-size:18px;color:var(--on-surface-variant)}
+  .body{font-size:15px;color:var(--on-surface-variant)}
+  /* buttons */
+  .row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:14px 28px;font-weight:600;font-size:15px;border:0;cursor:pointer;font-family:var(--font-body)}
+  .btn-primary{background:var(--primary);color:#fff}
+  .btn-ghost{background:transparent;color:var(--on-surface);border:1px solid var(--outline-variant)}
+  .btn-wa{background:var(--whatsapp);color:#fff}
+  /* badges */
+  .badge{display:inline-block;padding:5px 12px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em}
+  .b-disc{background:var(--primary);color:#fff}
+  .b-new{background:var(--secondary-container);color:#3b1c00}
+  .b-best{background:var(--primary-fixed);color:#832700}
+  .b-sold{background:#e3d9cb;color:#5c4037}
+  /* product card */
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:24px}
+  .pcard .img{aspect-ratio:4/5;border-radius:14px;background:linear-gradient(135deg,#f1e7d9,#e5beb2);position:relative;overflow:hidden}
+  .pcard .img .b{position:absolute;top:12px;left:12px}
+  .pcard .cat{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--primary);font-weight:700;margin-top:12px}
+  .pcard .nm{font-family:var(--font-head);font-size:17px;margin-top:4px}
+  .pcard .wt{font-size:13px;color:var(--on-surface-variant);margin-top:2px}
+  .pcard .pr{margin-top:6px;font-weight:700}
+  .pcard .pr s{color:var(--on-surface-variant);font-weight:400;margin-left:8px}
+  .pcard .stars{color:var(--secondary-container);margin-top:4px;font-size:13px}
+  /* category tile */
+  .ctile{aspect-ratio:4/5;border-radius:16px;background:linear-gradient(160deg,#7a3a0e,#3d1a0a);position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:18px;color:#fff;max-width:240px}
+  .ctile h3{font-family:var(--font-head);font-size:22px}
+  /* navbar */
+  .nav{border:1px solid var(--outline-variant);border-radius:16px;overflow:hidden}
+  .nav .bar{background:var(--primary);color:#fff;text-align:center;font-size:11px;padding:7px;letter-spacing:.02em}
+  .nav .main{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:rgba(255,248,242,.85)}
+  .nav .logo{font-family:var(--font-head);color:var(--primary);font-size:20px;font-weight:700}
+  .nav .links{display:flex;gap:18px;color:var(--on-surface);font-size:13px;font-weight:500;opacity:.8}
+  .nav .cta{background:var(--primary);color:#fff;border-radius:999px;padding:8px 16px;font-size:13px;font-weight:600}
+  /* trust */
+  .trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px;text-align:center}
+  .trust .t .ico{width:48px;height:48px;border-radius:999px;background:rgba(167,52,0,.1);color:var(--primary);display:grid;place-items:center;margin:0 auto 10px;font-size:22px}
+  .trust .t .tt{font-weight:700;font-size:14px}
+  .trust .t .td{font-size:12px;color:var(--on-surface-variant);margin-top:2px}
+  /* footer */
+  .foot{background:var(--on-surface);color:#faefe1;border-radius:16px;padding:28px}
+  .foot .logo{font-family:var(--font-head);color:var(--primary-fixed-dim);font-size:22px}
+  .foot p{color:#cbb9a8;font-size:13px;margin-top:8px;max-width:420px}
+  .note{font-size:13px;color:var(--on-surface-variant);margin-top:10px}
+  .card-box{background:var(--surface-container-low);border:1px solid var(--outline-variant);border-radius:18px;padding:26px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <div class="eyebrow">Shri Anjaneya · श्री अंजनेय</div>
+    <h1>Design System,<br><span class="accent">crafted with devotion</span></h1>
+    <p>The visual language of Shri Anjaneya — traditional attars &amp; pooja samagri from Kannauj. Marcellus for headings, Fira Sans for body, on a warm terracotta-on-cream palette.</p>
+  </div>
+
+  <section>
+    <h2 class="sec">Colour</h2>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#a73400"></div><div class="meta"><div class="name">Primary</div><div class="hex">#a73400</div></div></div>
+      <div class="sw"><div class="chip" style="background:#d14300"></div><div class="meta"><div class="name">Primary Container</div><div class="hex">#d14300</div></div></div>
+      <div class="sw"><div class="chip" style="background:#ffdbd0"></div><div class="meta"><div class="name">Primary Fixed</div><div class="hex">#ffdbd0</div></div></div>
+      <div class="sw"><div class="chip" style="background:#904d00"></div><div class="meta"><div class="name">Secondary</div><div class="hex">#904d00</div></div></div>
+      <div class="sw"><div class="chip" style="background:#fe932c"></div><div class="meta"><div class="name">Secondary Container</div><div class="hex">#fe932c</div></div></div>
+      <div class="sw"><div class="chip" style="background:#fff8f2;border-bottom:1px solid #e5beb2"></div><div class="meta"><div class="name">Background</div><div class="hex">#fff8f2</div></div></div>
+      <div class="sw"><div class="chip" style="background:#f7ecde"></div><div class="meta"><div class="name">Surface Container</div><div class="hex">#f7ecde</div></div></div>
+      <div class="sw"><div class="chip" style="background:#201b13"></div><div class="meta"><div class="name">On Surface</div><div class="hex">#201b13</div></div></div>
+      <div class="sw"><div class="chip" style="background:#5c4037"></div><div class="meta"><div class="name">On Surface Variant</div><div class="hex">#5c4037</div></div></div>
+      <div class="sw"><div class="chip" style="background:#907065"></div><div class="meta"><div class="name">Outline</div><div class="hex">#907065</div></div></div>
+      <div class="sw"><div class="chip" style="background:#25D366"></div><div class="meta"><div class="name">WhatsApp</div><div class="hex">#25D366</div></div></div>
+      <div class="sw"><div class="chip" style="background:#ba1a1a"></div><div class="meta"><div class="name">Error</div><div class="hex">#ba1a1a</div></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Typography</h2>
+    <div class="card-box type">
+      <div><div class="lbl">Display / Marcellus</div><div class="d1">Sacred scents</div></div>
+      <div><div class="lbl">Heading / Marcellus</div><div class="d2">Traditional Attars</div></div>
+      <div><div class="lbl">Subhead / Marcellus</div><div class="d3">Hawan Samagri</div></div>
+      <div><div class="lbl">Body Large / Fira Sans</div><div class="body-lg">Alcohol-free, long-lasting attars distilled in Kannauj from flowers, woods and resins.</div></div>
+      <div><div class="lbl">Body / Fira Sans</div><div class="body">Authentic pooja samagri, handcrafted with devotion and delivered with trust.</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Buttons</h2>
+    <div class="card-box"><div class="row">
+      <button class="btn btn-primary">Explore the Collection →</button>
+      <button class="btn btn-ghost">Our Story</button>
+      <button class="btn btn-wa">💬 Enquire on WhatsApp</button>
+    </div></div>
+  </section>
+
+  <section>
+    <h2 class="sec">Badges</h2>
+    <div class="card-box"><div class="row">
+      <span class="badge b-disc">17% OFF</span>
+      <span class="badge b-new">New</span>
+      <span class="badge b-best">Bestseller</span>
+      <span class="badge b-sold">Sold Out</span>
+    </div></div>
+  </section>
+
+  <section>
+    <h2 class="sec">Product &amp; Category Cards</h2>
+    <div class="cards">
+      <div class="pcard">
+        <div class="img"><span class="badge b-disc b">17% OFF</span></div>
+        <div class="cat">Attar Collections</div>
+        <div class="nm">Attar 12 Pcs Box Collection</div>
+        <div class="wt">12 pcs</div>
+        <div class="pr">₹500 <s>₹600</s></div>
+        <div class="stars">★★★★★ <span style="color:#5c4037">(46)</span></div>
+      </div>
+      <div class="pcard">
+        <div class="img"><span class="badge b-best b">Bestseller</span></div>
+        <div class="cat">Hawan Samagri</div>
+        <div class="nm">Hawan Samagri Balaji Box</div>
+        <div class="wt">500g</div>
+        <div class="pr">₹150 <s>₹180</s></div>
+        <div class="stars">★★★★★ <span style="color:#5c4037">(38)</span></div>
+      </div>
+      <div style="display:flex;align-items:flex-start"><div class="ctile"><h3>Perfumes &amp; Attars</h3></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Trust Signals</h2>
+    <div class="card-box trust">
+      <div class="t"><div class="ico">✔</div><div class="tt">100% Authentic</div><div class="td">Genuine, sourced directly</div></div>
+      <div class="t"><div class="ico">✿</div><div class="tt">Handcrafted</div><div class="td">Made the traditional way</div></div>
+      <div class="t"><div class="ico">★</div><div class="tt">Heritage Quality</div><div class="td">Pure ingredients, trusted recipes</div></div>
+      <div class="t"><div class="ico">💬</div><div class="tt">WhatsApp Support</div><div class="td">Personal pooja guidance</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Navigation</h2>
+    <div class="nav">
+      <div class="bar">✨ Handcrafted attars &amp; authentic pooja samagri — explore our collection &amp; enquire on WhatsApp</div>
+      <div class="main">
+        <span class="logo">श्री ANJANEYA</span>
+        <span class="links"><span>Home</span><span>Attars ▾</span><span>Pooja Samagri ▾</span><span>Festivals</span><span>Brass Idols</span><span>Gifting</span></span>
+        <span class="cta">💬 Enquire</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Footer</h2>
+    <div class="foot">
+      <div class="logo">Shri Anjaneya</div>
+      <p>Authentic pooja samagri, hawan items, and traditional attars — handcrafted with devotion in Kannauj. Explore our collection and enquire on WhatsApp.</p>
+      <div class="note" style="color:#8a7565;margin-top:14px">© Shri Anjaneya · Moh. Holi, Kannauj, Uttar Pradesh – 209725</div>
+    </div>
+  </section>
+
+  <p class="note" style="margin-top:56px;text-align:center">Fonts shown: <strong>Marcellus</strong> (headings) + <strong>Fira Sans</strong> (body) — self-hosted in the live site; this page falls back to Georgia / system sans where unavailable.</p>
+</div>
+</body>
+</html>

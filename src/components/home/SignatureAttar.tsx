@@ -17,7 +17,7 @@ export default function SignatureAttar() {
         {/* Attar image */}
         <div className="relative order-1 aspect-[4/3] w-full overflow-hidden rounded-3xl lg:aspect-square">
           <Image
-            src="/images/products/Attar mix Box Bottle big.jpg"
+            src="/images/products-studio/Attar mix Box Bottle big.jpg"
             alt={t("Shri Anjaneya traditional attar", "श्री अंजनेय पारंपरिक अत्तर")}
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
