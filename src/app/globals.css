@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #a73400;
+  --color-primary-container: #d14300;
+  --color-primary-fixed: #ffdbd0;
+  --color-primary-fixed-dim: #ffb59d;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #fffbff;
+  --color-on-primary-fixed: #390c00;
+  --color-on-primary-fixed-variant: #832700;
+
+  --color-secondary: #904d00;
+  --color-secondary-container: #fe932c;
+  --color-secondary-fixed: #ffdcc3;
+  --color-secondary-fixed-dim: #ffb77d;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #663500;
+  --color-on-secondary-fixed: #2f1500;
+  --color-on-secondary-fixed-variant: #6e3900;
+
+  --color-tertiary: #904917;
+  --color-tertiary-container: #ae602d;
+  --color-tertiary-fixed: #ffdbc9;
+  --color-tertiary-fixed-dim: #ffb68c;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #fffbff;
+  --color-on-tertiary-fixed: #321200;
+  --color-on-tertiary-fixed-variant: #753401;
+
+  --color-background: #fff8f2;
+  --color-surface: #fff8f2;
+  --color-surface-bright: #fff8f2;
+  --color-surface-dim: #e3d9cb;
+  --color-surface-tint: #ab3500;
+  --color-surface-variant: #ece1d3;
+  --color-surface-container: #f7ecde;
+  --color-surface-container-low: #fdf2e4;
+  --color-surface-container-high: #f1e7d9;
+  --color-surface-container-highest: #ece1d3;
+  --color-surface-container-lowest: #ffffff;
+
+  --color-on-surface: #201b13;
+  --color-on-surface-variant: #5c4037;
+  --color-on-background: #201b13;
+
+  --color-outline: #907065;
+  --color-outline-variant: #e5beb2;
+
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #93000a;
+
+  --color-inverse-surface: #353027;
+  --color-inverse-on-surface: #faefe1;
+  --color-inverse-primary: #ffb59d;
+
+  --color-whatsapp: #25D366;
+
+  --font-headline: "Marcellus", Georgia, "Times New Roman", serif;
+  --font-body: "Fira Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-label: "Fira Sans", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern", "liga", "calt";
+}
+
+/* Marcellus is a refined classical serif — it reads best near default tracking */
+h1, h2, h3 {
+  letter-spacing: -0.005em;
+}
+
+.display-serif {
+  font-family: var(--font-headline);
+  letter-spacing: 0.01em;
+  line-height: 1.06;
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+.material-symbols-filled {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+/* Custom utilities */
+.glass-nav {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.mandala-bg {
+  background-image: radial-gradient(circle at center, transparent 0%, transparent 100%),
+    url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0 L60 40 L100 50 L60 60 L50 100 L40 60 L0 50 L40 40 Z' fill='%23a73400' fill-opacity='0.03'/%3E%3C/svg%3E");
+}
+
+.hindi-text {
+  font-size: 110%;
+}
+
+/* Hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Range slider */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: var(--color-primary);
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--color-primary-fixed);
+  color: var(--color-on-primary-fixed-variant);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Page transition */
+main {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  main { animation: none; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
