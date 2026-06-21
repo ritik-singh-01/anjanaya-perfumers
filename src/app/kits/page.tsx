@@ -22,7 +22,7 @@ export default function KitsPage() {
       <Breadcrumb items={[{ label: t("Curated Pooja Kits", "पूजा किट") }]} />
 
       <div className="text-center mb-12">
-        <h1 className="text-3xl md:text-5xl font-[family-name:var(--font-headline)] font-bold mb-4 tracking-tight">
+        <h1 className="text-3xl md:text-5xl display-serif mb-4 tracking-tight">
           {t("Curated Pooja Kits", "क्यूरेटेड पूजा किट")}
         </h1>
         <p className="text-on-surface-variant text-lg max-w-2xl mx-auto">
@@ -42,7 +42,7 @@ export default function KitsPage() {
             <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4">
               <span className="material-symbols-outlined text-primary text-2xl">{kit.icon}</span>
             </div>
-            <h3 className="text-xl font-[family-name:var(--font-headline)] font-bold mb-1">
+            <h3 className="text-xl display-serif mb-1">
               {t(kit.name, kit.nameHi)}
             </h3>
             <p className="text-2xl font-bold text-primary mb-4">{kit.price}</p>
@@ -64,7 +64,7 @@ export default function KitsPage() {
 
       {/* Custom Kit CTA */}
       <div className="bg-primary rounded-2xl p-8 md:p-12 text-center text-on-primary">
-        <h2 className="text-2xl md:text-3xl font-[family-name:var(--font-headline)] font-bold mb-4">
+        <h2 className="text-2xl md:text-3xl display-serif mb-4">
           {t("Build Your Own Custom Kit", "अपनी कस्टम किट बनाएँ")}
         </h2>
         <p className="text-on-primary/80 mb-6 max-w-xl mx-auto">

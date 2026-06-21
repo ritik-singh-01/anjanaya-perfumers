@@ -1944,7 +1944,7 @@ export const categories: Category[] = [
     name: "Pooja Samagri",
     nameHindi: "पूजा सामग्री",
     description: "Complete range of pure and authentic pooja essentials",
-    image: "/images/categories/pooja-samagri.jpg",
+    image: "/images/products-studio/Hawan bala ji box.jpg",
     productCount: 49,
   },
   {
@@ -1952,7 +1952,7 @@ export const categories: Category[] = [
     name: "Perfumes & Attars",
     nameHindi: "इत्र और अत्तर",
     description: "Traditional attars and fragrances",
-    image: "/images/categories/perfumes-attars.jpg",
+    image: "/images/products-studio/Attar box 24pcs.jpg",
     productCount: 14,
   },
   {
@@ -1960,7 +1960,7 @@ export const categories: Category[] = [
     name: "Curated Pooja Kits",
     nameHindi: "पूजा किट",
     description: "Festival-ready complete pooja kits",
-    image: "/images/categories/curated-kits.jpg",
+    image: "/images/products-studio/5 ratan.jpg",
     productCount: 0,
   },
   {
@@ -1968,7 +1968,7 @@ export const categories: Category[] = [
     name: "Combo Offers",
     nameHindi: "कॉम्बो ऑफर",
     description: "Save more with our value combos",
-    image: "/images/categories/combo-offers.jpg",
+    image: "/images/products-studio/Attar box 8pcs.jpg",
     productCount: 0,
   },
   {
@@ -1976,7 +1976,7 @@ export const categories: Category[] = [
     name: "Temple & Bulk Orders",
     nameHindi: "मंदिर और थोक ऑर्डर",
     description: "Wholesale pricing for temples and bulk buyers",
-    image: "/images/categories/temple-bulk.jpg",
+    image: "/images/products-studio/Gugal box 12pcs.jpg",
     productCount: 0,
   },
   {

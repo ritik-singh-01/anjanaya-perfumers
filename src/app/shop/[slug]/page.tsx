@@ -78,11 +78,11 @@ export default async function ProductPage({
       />
 
       {/* Product Hero */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 mb-16 md:mb-20">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 mb-16 md:mb-20 lg:items-start">
         <div className="lg:col-span-7">
           <ImageGallery images={product.images} productName={product.name} />
         </div>
-        <div className="lg:col-span-5">
+        <div className="lg:col-span-5 lg:sticky lg:top-24 lg:self-start">
           <ProductInfo product={product} />
         </div>
       </div>

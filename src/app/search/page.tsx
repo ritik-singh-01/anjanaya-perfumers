@@ -22,7 +22,7 @@ function SearchContent() {
     <div className="max-w-7xl mx-auto px-4 md:px-6 py-6 md:py-10">
       <Breadcrumb items={[{ label: t("Search Results", "खोज परिणाम") }]} />
 
-      <h1 className="text-2xl md:text-4xl font-[family-name:var(--font-headline)] font-bold mb-2">
+      <h1 className="text-2xl md:text-4xl display-serif mb-2">
         {query
           ? t(`Results for "${query}"`, `"${query}" के परिणाम`)
           : t("Search Products", "उत्पाद खोजें")}

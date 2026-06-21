@@ -18,7 +18,7 @@ export default function ProductTabs({ product }: ProductTabsProps) {
       label: t("Description", "विवरण"),
       content: (
         <div className="space-y-6">
-          <h3 className="text-2xl font-[family-name:var(--font-headline)] font-bold">
+          <h3 className="text-2xl md:text-3xl display-serif">
             {t("About this Product", "इस उत्पाद के बारे में")}
           </h3>
           <p className="text-on-surface-variant leading-loose">
@@ -33,7 +33,7 @@ export default function ProductTabs({ product }: ProductTabsProps) {
             label: t("Ingredients", "सामग्री"),
             content: (
               <div className="space-y-4">
-                <h3 className="text-2xl font-[family-name:var(--font-headline)] font-bold">
+                <h3 className="text-2xl md:text-3xl display-serif">
                   {t("Ingredients & Composition", "सामग्री और संरचना")}
                 </h3>
                 <p className="text-on-surface-variant leading-loose">{product.ingredients}</p>
@@ -48,7 +48,7 @@ export default function ProductTabs({ product }: ProductTabsProps) {
             label: t("How to Use", "उपयोग विधि"),
             content: (
               <div className="space-y-4">
-                <h3 className="text-2xl font-[family-name:var(--font-headline)] font-bold">
+                <h3 className="text-2xl md:text-3xl display-serif">
                   {t("How to Use", "उपयोग विधि")}
                 </h3>
                 <p className="text-on-surface-variant leading-loose">{product.howToUse}</p>
@@ -61,7 +61,7 @@ export default function ProductTabs({ product }: ProductTabsProps) {
       label: t(`Reviews (${product.reviewCount})`, `रिव्यू (${product.reviewCount})`),
       content: (
         <div className="space-y-6">
-          <h3 className="text-2xl font-[family-name:var(--font-headline)] font-bold">
+          <h3 className="text-2xl md:text-3xl display-serif">
             {t("Customer Reviews", "ग्राहक रिव्यू")}
           </h3>
           <div className="flex items-center gap-4 mb-8">

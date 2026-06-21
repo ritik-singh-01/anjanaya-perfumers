@@ -85,7 +85,7 @@ function ShopContent() {
       <header className="mb-8 md:mb-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-6">
           <div>
-            <h1 className="text-3xl md:text-5xl font-[family-name:var(--font-headline)] font-bold text-on-surface tracking-tight mb-2">
+            <h1 className="text-3xl md:text-5xl display-serif text-on-surface tracking-tight mb-2">
               {t("Guided by Tradition", "परंपरा से प्रेरित")}
             </h1>
             <p className="text-base md:text-lg text-on-surface-variant max-w-xl font-light">

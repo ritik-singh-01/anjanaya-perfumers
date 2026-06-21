@@ -7,7 +7,7 @@ export default function TermsPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 md:px-6 py-6 md:py-10">
       <Breadcrumb items={[{ label: "Policies", href: "/policies/terms" }, { label: "Terms & Conditions" }]} />
-      <h1 className="text-3xl md:text-4xl font-[family-name:var(--font-headline)] font-bold mb-8">Terms &amp; Conditions</h1>
+      <h1 className="text-3xl md:text-4xl display-serif mb-8">Terms &amp; Conditions</h1>
       <div className="prose prose-lg max-w-none text-on-surface-variant space-y-6">
         <p><strong>Last Updated:</strong> March 2026</p>
         <p>By accessing and using the {siteConfig.name} website, you agree to the following terms and conditions.</p>

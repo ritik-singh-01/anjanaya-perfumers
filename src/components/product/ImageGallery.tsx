@@ -41,7 +41,7 @@ export default function ImageGallery({ images, productName }: ImageGalleryProps)
       )}
 
       {/* Main Image */}
-      <div className="flex-1 aspect-[4/5] bg-surface-container-low rounded-2xl overflow-hidden relative group">
+      <div className="flex-1 aspect-[4/5] bg-surface-container-low rounded-2xl overflow-hidden relative group shadow-sm">
         <div className="absolute inset-0 bg-gradient-to-tr from-surface-container-lowest/20 to-transparent pointer-events-none z-10" />
         <Image
           src={images[activeIndex]}

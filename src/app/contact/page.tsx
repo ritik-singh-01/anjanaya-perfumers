@@ -11,7 +11,7 @@ export default function ContactPage() {
     <div className="max-w-4xl mx-auto px-4 md:px-6 py-6 md:py-10">
       <Breadcrumb items={[{ label: t("Contact Us", "संपर्क करें") }]} />
 
-      <h1 className="text-3xl md:text-5xl font-[family-name:var(--font-headline)] font-bold mb-8 tracking-tight">
+      <h1 className="text-3xl md:text-5xl display-serif mb-8 tracking-tight">
         {t("Contact Us", "संपर्क करें")}
       </h1>
 
@@ -64,7 +64,7 @@ export default function ContactPage() {
         {/* Quick Actions */}
         <div className="space-y-6">
           <div className="bg-surface-container-low rounded-2xl p-8">
-            <h2 className="text-xl font-[family-name:var(--font-headline)] font-bold mb-6">
+            <h2 className="text-xl display-serif mb-6">
               {t("Quick Actions", "त्वरित कार्यवाही")}
             </h2>
 

@@ -7,7 +7,7 @@ export default function PrivacyPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 md:px-6 py-6 md:py-10">
       <Breadcrumb items={[{ label: "Policies", href: "/policies/privacy" }, { label: "Privacy Policy" }]} />
-      <h1 className="text-3xl md:text-4xl font-[family-name:var(--font-headline)] font-bold mb-8">Privacy Policy</h1>
+      <h1 className="text-3xl md:text-4xl display-serif mb-8">Privacy Policy</h1>
       <div className="prose prose-lg max-w-none text-on-surface-variant space-y-6">
         <p><strong>Effective Date:</strong> June 2026</p>
         <p>{siteConfig.name} (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) respects your privacy. This website is a <strong>product showcase</strong> — we display our collection of attars and pooja samagri. We do not sell, take payments, or ship orders through this website at this time. This policy explains the limited information we handle when you browse or contact us.</p>

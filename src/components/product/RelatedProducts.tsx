@@ -16,7 +16,7 @@ export default function RelatedProducts({ products }: RelatedProductsProps) {
   return (
     <section>
       <div className="flex justify-between items-end mb-8 md:mb-10">
-        <h2 className="text-2xl md:text-3xl font-[family-name:var(--font-headline)] font-bold">
+        <h2 className="text-2xl md:text-3xl display-serif">
           {t("Sacred Offerings", "पवित्र प्रसाद")}
         </h2>
       </div>

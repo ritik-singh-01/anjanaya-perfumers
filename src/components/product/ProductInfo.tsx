@@ -39,8 +39,13 @@ export default function ProductInfo({ product }: ProductInfoProps) {
         </span>
       </div>
 
+      {/* Category eyebrow */}
+      {product.subcategory && (
+        <p className="eyebrow mb-2">{product.subcategory.replace(/-/g, " ")}</p>
+      )}
+
       {/* Title */}
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-[family-name:var(--font-headline)] font-bold text-on-surface mb-2 tracking-tight">
+      <h1 className="display-serif text-3xl md:text-4xl lg:text-5xl text-on-surface mb-2">
         {t(product.name, product.nameHindi)}
       </h1>
       <p className="text-base text-on-surface-variant mb-6">{product.weight}</p>

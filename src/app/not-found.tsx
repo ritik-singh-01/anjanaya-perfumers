@@ -6,7 +6,7 @@ export default function NotFound() {
       <span className="material-symbols-outlined text-8xl text-outline-variant mb-6">
         search_off
       </span>
-      <h1 className="text-4xl font-[family-name:var(--font-headline)] font-bold mb-4">
+      <h1 className="text-4xl display-serif mb-4">
         Page Not Found
       </h1>
       <p className="text-on-surface-variant text-lg mb-8 max-w-md">

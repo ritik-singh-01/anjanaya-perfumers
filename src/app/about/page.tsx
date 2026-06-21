@@ -10,7 +10,7 @@ export default function AboutPage() {
     <div className="max-w-4xl mx-auto px-4 md:px-6 py-6 md:py-10">
       <Breadcrumb items={[{ label: t("Our Story", "हमारी कहानी") }]} />
 
-      <h1 className="text-3xl md:text-5xl font-[family-name:var(--font-headline)] font-bold mb-8 tracking-tight">
+      <h1 className="text-3xl md:text-5xl display-serif mb-8 tracking-tight">
         {t("Our Story", "हमारी कहानी")}
       </h1>
 
@@ -24,7 +24,7 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-[family-name:var(--font-headline)] font-bold mb-4">
+        <h2 className="text-2xl display-serif mb-4">
           {t("Paramparagat Quality — Traditional Excellence", "पारंपरागत गुणवत्ता")}
         </h2>
         <p className="text-on-surface-variant leading-relaxed mb-6">
@@ -34,7 +34,7 @@ export default function AboutPage() {
           )}
         </p>
 
-        <h2 className="text-2xl font-[family-name:var(--font-headline)] font-bold mb-4">
+        <h2 className="text-2xl display-serif mb-4">
           {t("Why Choose Shri Anjaneya?", "श्री अंजनेय क्यों चुनें?")}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -52,7 +52,7 @@ export default function AboutPage() {
           ))}
         </div>
 
-        <h2 className="text-2xl font-[family-name:var(--font-headline)] font-bold mb-4">
+        <h2 className="text-2xl display-serif mb-4">
           {t("Our Promise", "हमारा वादा")}
         </h2>
         <ul className="space-y-3 mb-8">
