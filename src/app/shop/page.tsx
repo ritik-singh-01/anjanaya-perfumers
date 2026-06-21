@@ -16,6 +16,7 @@ const PRODUCTS_PER_PAGE = 12;
 function ShopContent() {
   const searchParams = useSearchParams();
   const initialCategory = searchParams.get("category") as ProductCategory | null;
+  const subParam = searchParams.get("sub");
   const { t } = useLanguage();
 
   const [filters, setFilters] = useState<FilterState>({
@@ -28,7 +29,9 @@ function ShopContent() {
   const [currentPage, setCurrentPage] = useState(1);
 
   const filteredProducts = useMemo(() => {
-    let result = [...products];
+    let result = subParam
+      ? products.filter((p) => p.subcategory === subParam)
+      : [...products];
 
     if (filters.category) {
       result = result.filter((p) => p.category === filters.category);
@@ -62,7 +65,7 @@ function ShopContent() {
     }
 
     return result;
-  }, [filters]);
+  }, [filters, subParam]);
 
   const totalPages = Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE);
   const paginatedProducts = filteredProducts.slice(

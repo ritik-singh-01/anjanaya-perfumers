@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { siteConfig } from "@/lib/siteConfig";
@@ -14,9 +15,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold font-[family-name:var(--font-headline)] text-inverse-primary mb-4">
-              {t(siteConfig.name, siteConfig.nameHindi)}
-            </h3>
+            <Image
+              src="/images/logo.png"
+              alt={t(siteConfig.name, siteConfig.nameHindi)}
+              width={1204}
+              height={580}
+              className="h-14 w-auto mb-5 brightness-0 invert opacity-90"
+            />
             <p className="text-inverse-on-surface/70 text-sm leading-relaxed mb-6">
               {t(
                 "Authentic pooja samagri, hawan items, and traditional attars — handcrafted with devotion. Explore our collection and enquire on WhatsApp.",

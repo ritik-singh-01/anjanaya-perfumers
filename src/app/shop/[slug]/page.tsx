@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { products, getProductBySlug, getRelatedProducts } from "@/data/products";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -9,6 +10,26 @@ import RelatedProducts from "@/components/product/RelatedProducts";
 // Pre-render every product page at build time (required for static export).
 export function generateStaticParams() {
   return products.map((product) => ({ slug: product.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const product = getProductBySlug(slug);
+  if (!product) return { title: "Product Not Found" };
+  const description = product.shortDescription || product.description.slice(0, 155);
+  return {
+    title: product.name,
+    description,
+    openGraph: {
+      title: `${product.name} | Shri Anjaneya`,
+      description,
+      images: product.images?.[0] ? [encodeURI(product.images[0])] : undefined,
+    },
+  };
 }
 
 export default async function ProductPage({
@@ -25,8 +46,29 @@ export default async function ProductPage({
 
   const related = getRelatedProducts(product, 4);
 
+  const productJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    image: product.images?.map((src) => "https://shrianjaneya.netlify.app" + encodeURI(src)),
+    description: product.shortDescription || product.description,
+    sku: product.id,
+    brand: { "@type": "Brand", name: "Shri Anjaneya" },
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "INR",
+      price: product.price,
+      availability: "https://schema.org/InStock",
+      url: "https://shrianjaneya.netlify.app/shop/" + product.slug,
+    },
+  };
+
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-6 py-6 md:py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+      />
       <Breadcrumb
         items={[
           { label: "Shop", href: "/shop" },

@@ -9,9 +9,10 @@ interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
   links: { href: string; labelEn: string; labelHi: string }[];
+  categories?: { href: string; en: string; hi: string }[];
 }
 
-export default function MobileMenu({ isOpen, onClose, links }: MobileMenuProps) {
+export default function MobileMenu({ isOpen, onClose, links, categories }: MobileMenuProps) {
   const { t } = useLanguage();
 
   useEffect(() => {
@@ -80,6 +81,25 @@ export default function MobileMenu({ isOpen, onClose, links }: MobileMenuProps) 
                 <span className="font-medium">{t(link.labelEn, link.labelHi)}</span>
               </Link>
             ))}
+
+            {categories && categories.length > 0 && (
+              <div className="mt-2 border-t border-outline-variant/20 pt-2">
+                <p className="px-6 py-2 text-xs uppercase tracking-widest text-on-surface-variant/60">
+                  {t("Shop by Category", "श्रेणी से खरीदें")}
+                </p>
+                {categories.map((c) => (
+                  <Link
+                    key={c.href}
+                    href={c.href}
+                    onClick={onClose}
+                    className="flex items-center gap-3 px-6 py-2.5 text-on-surface hover:bg-surface-container-low transition-colors"
+                  >
+                    <span className="material-symbols-outlined text-primary text-base">chevron_right</span>
+                    <span className="text-sm">{t(c.en, c.hi)}</span>
+                  </Link>
+                ))}
+              </div>
+            )}
           </nav>
 
           {/* Footer */}

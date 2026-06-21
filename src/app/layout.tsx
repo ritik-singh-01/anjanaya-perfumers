@@ -23,6 +23,7 @@ const firaSans = Fira_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://shrianjaneya.netlify.app"),
   title: {
     default: "Shri Anjaneya — Authentic Pooja Samagri & Attars | श्री अंजनेय",
     template: "%s | Shri Anjaneya",
@@ -61,6 +62,30 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+// Structured data for search engines (Organization / brand info)
+const orgJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Shri Anjaneya",
+  url: "https://shrianjaneya.netlify.app",
+  logo: "https://shrianjaneya.netlify.app/images/logo.png",
+  description:
+    "Authentic pooja samagri, hawan samagri, and traditional attars handcrafted in Kannauj, Uttar Pradesh.",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Moh. Holi",
+    addressLocality: "Kannauj",
+    addressRegion: "Uttar Pradesh",
+    postalCode: "209725",
+    addressCountry: "IN",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+91-8169638918",
+    contactType: "customer service",
+  },
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -79,6 +104,10 @@ export default function RootLayout({
         <meta name="theme-color" content="#a73400" />
       </head>
       <body className="min-h-full flex flex-col font-[family-name:var(--font-body)] antialiased bg-background text-on-surface">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
         <LanguageProvider>
           <Navbar />
           <main className="flex-1 pt-[88px] md:pt-[92px]">{children}</main>
