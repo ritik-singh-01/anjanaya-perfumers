@@ -32,6 +32,15 @@ export default function HomePage() {
       {/* 3. Category gallery */}
       <CategoryGrid />
 
+      {/* 3b. Rituals video band — video-ready (drop /videos/ritual.mp4 + set videoSrc) */}
+      <VideoShowcase
+        poster="/images/banners/hero-banner.jpg"
+        titleEn="Devotion in motion"
+        titleHi="भक्ति, गति में"
+        subEn="Hawan, tikka and daily rituals — video coming soon."
+        subHi="हवन, तिलक और दैनिक अनुष्ठान — वीडियो जल्द ही।"
+      />
+
       {/* 4. Traditional attars */}
       <ProductCarousel
         title={{ en: "Traditional Attars", hi: "पारंपरिक अत्तर" }}
