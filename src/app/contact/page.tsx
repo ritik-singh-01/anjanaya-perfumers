@@ -83,28 +83,28 @@ export default function ContactPage() {
               </a>
 
               <a
-                href={`https://wa.me/${siteConfig.whatsapp}?text=Hi!%20I%20want%20to%20place%20a%20bulk%20order%20for%20our%20temple.`}
+                href={`https://wa.me/${siteConfig.whatsapp}?text=Hi!%20I'd%20like%20a%20quote%20for%20a%20bulk%20/%20temple%20requirement.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 p-4 bg-secondary text-on-secondary rounded-xl hover:opacity-90 transition-opacity"
               >
                 <span className="material-symbols-outlined">temple_hindu</span>
                 <div>
-                  <p className="font-bold">{t("Temple / Bulk Orders", "मंदिर / थोक ऑर्डर")}</p>
+                  <p className="font-bold">{t("Temple / Bulk Enquiry", "मंदिर / थोक पूछताछ")}</p>
                   <p className="text-sm text-on-secondary/80">{t("Special wholesale pricing", "विशेष थोक मूल्य")}</p>
                 </div>
               </a>
 
               <a
-                href={`https://wa.me/${siteConfig.whatsapp}?text=Hi!%20I%20have%20an%20issue%20with%20my%20order.`}
+                href={`https://wa.me/${siteConfig.whatsapp}?text=Hi!%20I%20have%20a%20question%20about%20a%20product.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 p-4 bg-surface-container-high rounded-xl hover:bg-surface-container-highest transition-colors"
               >
                 <span className="material-symbols-outlined text-primary">help</span>
                 <div>
-                  <p className="font-bold">{t("Order Support", "ऑर्डर सहायता")}</p>
-                  <p className="text-sm text-on-surface-variant">{t("Track, return, or report an issue", "ट्रैक, वापसी, या समस्या रिपोर्ट")}</p>
+                  <p className="font-bold">{t("Product Help", "उत्पाद सहायता")}</p>
+                  <p className="text-sm text-on-surface-variant">{t("Ask about any product or how to use it", "किसी भी उत्पाद या उसके उपयोग के बारे में पूछें")}</p>
                 </div>
               </a>
             </div>

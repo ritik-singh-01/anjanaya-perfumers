@@ -58,7 +58,7 @@ export default function AboutPage() {
         <ul className="space-y-3 mb-8">
           {[
             { en: "Freshness Guarantee — especially for dhoop, agarbatti, and chandan products", hi: "ताज़गी की गारंटी — विशेषकर धूप, अगरबत्ती और चंदन उत्पादों के लिए" },
-            { en: "Safe packaging for glass items (gulab jal, attar bottles) with thermocol inserts", hi: "काँच की वस्तुओं के लिए सुरक्षित पैकेजिंग" },
+            { en: "Pure, traditional ingredients — no artificial additives in our attars or samagri", hi: "शुद्ध, पारंपरिक सामग्री — हमारे अत्तर या सामग्री में कोई कृत्रिम मिलावट नहीं" },
             { en: "Honest advice — we help you choose exactly what your ritual needs", hi: "ईमानदार सलाह — हम आपकी पूजा के लिए सही सामग्री चुनने में मदद करते हैं" },
             { en: "Responsive WhatsApp support — we reply within 2 hours", hi: "उत्तरदायी व्हाट्सएप सहायता — हम 2 घंटे में जवाब देते हैं" },
           ].map((item, i) => (
