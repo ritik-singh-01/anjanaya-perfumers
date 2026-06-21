@@ -63,10 +63,11 @@ export default function CategoryGrid() {
     <section className="py-16 md:py-24 px-6 md:px-12 mandala-bg">
       <Reveal>
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="font-[family-name:var(--font-headline)] text-3xl md:text-4xl mb-2">
+          <p className="eyebrow mb-3">{t("Our Range", "हमारी श्रेणी")}</p>
+          <h2 className="display-serif text-4xl md:text-5xl">
             {t("Sacred Collections", "पवित्र संग्रह")}
           </h2>
-          <div className="w-24 h-1 bg-primary mx-auto mt-4" />
+          <div className="w-16 h-px bg-primary/50 mx-auto mt-5" />
         </div>
       </Reveal>
 
@@ -79,7 +80,7 @@ export default function CategoryGrid() {
           >
             <Link
               href={cat.href}
-              className="group relative block aspect-[4/5] overflow-hidden rounded-xl bg-surface-container-low"
+              className="card-lift group relative block aspect-[4/5] overflow-hidden rounded-2xl bg-surface-container-low shadow-sm"
             >
               <Image
                 src={cat.image}

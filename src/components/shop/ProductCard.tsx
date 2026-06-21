@@ -24,7 +24,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       {/* Image */}
       <Link
         href={`/shop/${product.slug}`}
-        className="relative aspect-[4/5] bg-surface-container-low mb-4 overflow-hidden rounded-lg"
+        className="card-lift relative aspect-[4/5] bg-surface-container-low mb-4 overflow-hidden rounded-2xl shadow-sm"
       >
         {/* Badges */}
         <div className="absolute top-3 left-3 z-20 flex flex-col gap-1.5">

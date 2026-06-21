@@ -20,6 +20,7 @@ export default function FeaturedProducts({ products, title }: FeaturedProductsPr
         <Reveal>
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-16 gap-6">
             <div>
+              <p className="eyebrow mb-2">{t("Handpicked", "चुनिंदा")}</p>
               <h2 className="font-[family-name:var(--font-headline)] text-3xl md:text-4xl mb-4">
                 {title
                   ? t(title.en, title.hi)

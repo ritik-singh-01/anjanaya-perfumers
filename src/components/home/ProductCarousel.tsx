@@ -40,6 +40,7 @@ export default function ProductCarousel({
         <Reveal>
           <div className="mb-8 flex items-end justify-between gap-6">
             <div>
+              <p className="eyebrow mb-2">{t("Collection", "संग्रह")}</p>
               <h2 className="font-[family-name:var(--font-headline)] text-3xl md:text-4xl">
                 {t(title.en, title.hi)}
               </h2>

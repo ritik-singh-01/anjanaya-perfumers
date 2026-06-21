@@ -106,8 +106,9 @@ export default function HeroSection() {
               i === index && !reduce ? "scale-110" : "scale-100"
             }`}
           />
-          {/* Legibility overlay */}
+          {/* Legibility + cinematic depth overlays */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-black/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
         </div>
       ))}
 
@@ -122,7 +123,8 @@ export default function HeroSection() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="max-w-xl text-white"
           >
-            <p className="mb-4 text-xs uppercase tracking-[0.3em] text-white/80 md:text-sm">
+            <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-white/80 md:text-sm">
+              <span className="h-px w-8 bg-white/50" aria-hidden="true" />
               {t(active.eyebrowEn, active.eyebrowHi)}
             </p>
             <h1 className="display-serif mb-5 text-4xl md:text-6xl lg:text-7xl">
@@ -134,7 +136,7 @@ export default function HeroSection() {
             <div className="flex flex-col gap-4 sm:flex-row">
               <Link
                 href={active.href}
-                className="group inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 font-medium text-white transition-all hover:bg-primary-container active:scale-95"
+                className="group inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 font-medium text-white shadow-lg shadow-black/25 transition-all hover:bg-primary-container hover:shadow-xl active:scale-95"
               >
                 {t(active.ctaEn, active.ctaHi)}
                 <span className="material-symbols-outlined transition-transform group-hover:translate-x-0.5">
