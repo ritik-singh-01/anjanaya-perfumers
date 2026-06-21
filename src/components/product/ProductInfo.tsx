@@ -43,10 +43,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-[family-name:var(--font-headline)] font-bold text-on-surface mb-2 tracking-tight">
         {t(product.name, product.nameHindi)}
       </h1>
-      <h2 className="text-xl md:text-2xl font-[family-name:var(--font-headline)] text-primary mb-6">
-        {t(product.nameHindi, product.name)}{" "}
-        <span className="text-lg opacity-60">/ {product.weight}</span>
-      </h2>
+      <p className="text-base text-on-surface-variant mb-6">{product.weight}</p>
 
       {/* Badges */}
       <div className="flex flex-wrap gap-2 mb-4">

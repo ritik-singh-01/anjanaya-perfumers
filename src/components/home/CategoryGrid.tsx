@@ -93,9 +93,6 @@ export default function CategoryGrid() {
                 <h3 className="text-lg md:text-2xl font-[family-name:var(--font-headline)]">
                   {t(cat.en, cat.hi)}
                 </h3>
-                <p className="hindi-text opacity-90 text-sm md:text-base">
-                  {t(cat.hi, cat.en)}
-                </p>
               </div>
             </Link>
           </Reveal>
