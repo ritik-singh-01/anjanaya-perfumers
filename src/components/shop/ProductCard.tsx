@@ -68,7 +68,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           {product.subcategory}
         </p>
         <Link href={`/shop/${product.slug}`}>
-          <h3 className="text-base font-bold text-on-surface group-hover:text-primary transition-colors font-[family-name:var(--font-headline)] leading-tight">
+          <h3 className="text-base font-bold text-on-surface group-hover:text-primary transition-colors font-[family-name:var(--font-headline)] leading-tight line-clamp-2 min-h-[2.6em]">
             {t(product.name, product.nameHindi)}
           </h3>
         </Link>
