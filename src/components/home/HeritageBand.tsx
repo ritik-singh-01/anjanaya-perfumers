@@ -72,7 +72,7 @@ export default function HeritageBand() {
             />
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-lg lg:aspect-[5/4]">
               <Image
-                src="/images/products-studio/Attar keshar chandan.jpg"
+                src="/images/products-studio/Attar kewra gulab mix.jpg"
                 alt={t(
                   "Traditional attar craft in Kannauj",
                   "कन्नौज में पारंपरिक अत्तर कला"
