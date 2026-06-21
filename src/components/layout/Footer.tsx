@@ -15,13 +15,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <Image
-              src="/images/logo.png"
-              alt={t(siteConfig.name, siteConfig.nameHindi)}
-              width={1204}
-              height={580}
-              className="h-14 w-auto mb-5 brightness-0 invert opacity-90"
-            />
+            <div className="mb-5 inline-block rounded-xl bg-background px-4 py-3 shadow-sm">
+              <Image
+                src="/images/logo.png"
+                alt={t(siteConfig.name, siteConfig.nameHindi)}
+                width={1204}
+                height={580}
+                className="h-12 w-auto"
+              />
+            </div>
             <p className="text-inverse-on-surface/70 text-sm leading-relaxed mb-6">
               {t(
                 "Authentic pooja samagri, hawan items, and traditional attars — handcrafted with devotion. Explore our collection and enquire on WhatsApp.",
