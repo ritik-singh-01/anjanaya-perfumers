@@ -90,7 +90,7 @@ export default function CategoryGrid() {
               />
               <div className={`absolute inset-0 bg-gradient-to-t ${cat.color} via-transparent to-transparent`} />
               <div className="absolute bottom-4 md:bottom-6 left-4 md:left-6 text-white">
-                <h3 className="text-lg md:text-2xl font-[family-name:var(--font-headline)]">
+                <h3 className="text-base sm:text-lg md:text-2xl font-[family-name:var(--font-headline)] line-clamp-2">
                   {t(cat.en, cat.hi)}
                 </h3>
               </div>

@@ -16,13 +16,13 @@ export default function ImageGallery({ images, productName }: ImageGalleryProps)
     <div className="flex flex-col-reverse md:flex-row gap-4">
       {/* Thumbnails */}
       {images.length > 1 && (
-        <div className="flex md:flex-col gap-3 overflow-x-auto no-scrollbar md:w-20">
+        <div className="flex md:flex-col gap-3 overflow-x-auto no-scrollbar snap-x snap-mandatory md:w-20">
           {images.map((img, i) => (
             <button
               key={i}
               onClick={() => setActiveIndex(i)}
               className={cn(
-                "w-16 h-16 md:w-full aspect-square bg-surface-container-low rounded-xl overflow-hidden flex-shrink-0 transition-all",
+                "w-16 h-16 md:w-full aspect-square bg-surface-container-low rounded-xl overflow-hidden flex-shrink-0 snap-start transition-all",
                 i === activeIndex
                   ? "ring-2 ring-primary ring-offset-2"
                   : "hover:ring-1 hover:ring-outline-variant"

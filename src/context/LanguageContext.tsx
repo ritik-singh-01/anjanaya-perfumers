@@ -16,16 +16,24 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguage] = useState<Language>("en");
 
   useEffect(() => {
-    const stored = localStorage.getItem("anjanaya-lang") as Language | null;
-    if (stored === "hi" || stored === "en") {
-      setLanguage(stored);
+    try {
+      const stored = localStorage.getItem("anjanaya-lang") as Language | null;
+      if (stored === "hi" || stored === "en") {
+        setLanguage(stored);
+      }
+    } catch {
+      // localStorage unavailable (private mode / disabled) — fall back to default
     }
   }, []);
 
   const toggleLanguage = () => {
     setLanguage((prev) => {
       const next = prev === "en" ? "hi" : "en";
-      localStorage.setItem("anjanaya-lang", next);
+      try {
+        localStorage.setItem("anjanaya-lang", next);
+      } catch {
+        // ignore storage write errors
+      }
       return next;
     });
   };

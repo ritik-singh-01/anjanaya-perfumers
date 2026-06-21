@@ -12,6 +12,7 @@ const navLinks = [
   { href: "/", labelEn: "Home", labelHi: "होम" },
   { href: "/shop", labelEn: "Shop All", labelHi: "सभी उत्पाद" },
   { href: "/kits", labelEn: "Pooja Kits", labelHi: "पूजा किट" },
+  { href: "/festivals", labelEn: "Festivals", labelHi: "त्यौहार" },
   { href: "/about", labelEn: "Our Story", labelHi: "हमारी कहानी" },
   { href: "/faq", labelEn: "FAQ", labelHi: "सामान्य प्रश्न" },
   { href: "/contact", labelEn: "Contact", labelHi: "संपर्क" },
@@ -46,6 +47,7 @@ const megaNav = [
       { href: "/kits", en: "Curated Pooja Kits", hi: "पूजा किट" },
     ],
   },
+  { href: "/festivals", en: "Festivals", hi: "त्यौहार" },
   { href: "/shop?category=brass-idols", en: "Brass Idols", hi: "पीतल मूर्तियाँ" },
   { href: "/shop?category=jap-mala", en: "Jap Mala", hi: "जप माला" },
   { href: "/shop?category=rudraksha", en: "Rudraksha", hi: "रुद्राक्ष" },
@@ -98,7 +100,7 @@ export default function Navbar() {
             >
               <Image
                 src="/images/logo.png"
-                alt="Shri Anjaneya"
+                alt="Shri Anjaneya logo — authentic pooja samagri and attars"
                 width={1204}
                 height={580}
                 priority
@@ -149,8 +151,8 @@ export default function Navbar() {
 
           {/* Right side */}
           <div className="flex items-center gap-2 md:gap-4">
-            {/* Desktop search */}
-            <div className="hidden lg:block">
+            {/* Desktop search (xl+ to leave room for the category nav) */}
+            <div className="hidden xl:block">
               <SearchBar />
             </div>
 
@@ -166,7 +168,7 @@ export default function Navbar() {
             {/* Mobile search toggle */}
             <button
               onClick={() => setSearchOpen(!searchOpen)}
-              className="lg:hidden p-2 text-on-surface hover:text-primary transition-all"
+              className="xl:hidden p-2 text-on-surface hover:text-primary transition-all"
             >
               <span className="material-symbols-outlined">search</span>
             </button>

@@ -42,6 +42,7 @@ export default function Footer() {
               {[
                 { href: "/shop?category=pooja-samagri", en: "Pooja Samagri", hi: "पूजा सामग्री" },
                 { href: "/shop?category=perfumes-attars", en: "Perfumes & Attars", hi: "इत्र और अत्तर" },
+                { href: "/festivals", en: "Shop by Festival", hi: "त्यौहार अनुसार" },
                 { href: "/kits", en: "Curated Pooja Kits", hi: "पूजा किट" },
                 { href: "/shop", en: "All Products", hi: "सभी उत्पाद" },
               ].map((link) => (

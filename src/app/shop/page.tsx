@@ -22,7 +22,7 @@ function ShopContent() {
   const [filters, setFilters] = useState<FilterState>({
     category: initialCategory,
     priceRange: [0, 1000],
-    festival: null,
+    festival: searchParams.get("festival"),
     sortBy: "featured",
     searchQuery: "",
   });

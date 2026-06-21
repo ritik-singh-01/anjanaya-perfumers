@@ -6,7 +6,7 @@ const csp = [
   "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' data: https://fonts.gstatic.com",
-  "img-src 'self' data: blob: https://lh3.googleusercontent.com",
+  "img-src 'self' data: blob:",
   "connect-src 'self'",
   "frame-ancestors 'self'",
   "base-uri 'self'",
@@ -28,13 +28,7 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "lh3.googleusercontent.com",
-        pathname: "/aida-public/**",
-      },
-    ],
+    // All images are local (in /public); no remote hosts are allowed.
     formats: ["image/webp", "image/avif"],
   },
   async headers() {
