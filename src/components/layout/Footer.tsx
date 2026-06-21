@@ -66,6 +66,7 @@ export default function Footer() {
               {[
                 { href: "/about", en: "Our Story", hi: "हमारी कहानी" },
                 { href: "/contact", en: "Contact Us", hi: "संपर्क करें" },
+                { href: "/faq", en: "FAQ", hi: "सामान्य प्रश्न" },
                 { href: "/policies/privacy", en: "Privacy Policy", hi: "गोपनीयता नीति" },
                 { href: "/policies/terms", en: "Terms & Conditions", hi: "नियम और शर्तें" },
                 { href: "/policies/shipping", en: "Availability & Enquiries", hi: "उपलब्धता और पूछताछ" },

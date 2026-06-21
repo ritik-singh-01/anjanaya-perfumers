@@ -1979,6 +1979,46 @@ export const categories: Category[] = [
     image: "/images/categories/temple-bulk.jpg",
     productCount: 0,
   },
+  {
+    id: "brass-idols",
+    name: "Brass Idols",
+    nameHindi: "पीतल मूर्तियाँ",
+    description: "Handcrafted brass idols and statues for your temple",
+    image: "/images/banners/hero-banner.jpg",
+    productCount: 0,
+  },
+  {
+    id: "jap-mala",
+    name: "Jap Mala",
+    nameHindi: "जप माला",
+    description: "Tulsi, sandalwood, and rudraksha japa malas",
+    image: "/images/banners/hero-banner.jpg",
+    productCount: 0,
+  },
+  {
+    id: "rudraksha",
+    name: "Rudraksha",
+    nameHindi: "रुद्राक्ष",
+    description: "Authentic rudraksha beads, malas and bracelets",
+    image: "/images/banners/hero-banner.jpg",
+    productCount: 0,
+  },
+  {
+    id: "astro-products",
+    name: "Astro Products",
+    nameHindi: "ज्योतिष उत्पाद",
+    description: "Yantras, gemstones and astrology essentials",
+    image: "/images/banners/hero-banner.jpg",
+    productCount: 0,
+  },
+  {
+    id: "gifting",
+    name: "Gifting",
+    nameHindi: "उपहार",
+    description: "Curated gift sets and return gifts for every occasion",
+    image: "/images/banners/hero-banner.jpg",
+    productCount: 0,
+  },
 ];
 
 // ============================================================

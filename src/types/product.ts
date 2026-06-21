@@ -31,7 +31,12 @@ export type ProductCategory =
   | "curated-kits"
   | "perfumes-attars"
   | "combo-offers"
-  | "temple-bulk";
+  | "temple-bulk"
+  | "brass-idols"
+  | "jap-mala"
+  | "rudraksha"
+  | "astro-products"
+  | "gifting";
 
 export interface Category {
   id: ProductCategory;

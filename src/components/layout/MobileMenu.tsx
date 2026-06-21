@@ -40,7 +40,7 @@ export default function MobileMenu({ isOpen, onClose, links, categories }: Mobil
       {/* Drawer */}
       <div
         className={cn(
-          "fixed top-0 right-0 h-full w-[280px] bg-background z-[70] shadow-2xl transition-transform duration-300 ease-in-out",
+          "fixed top-0 right-0 h-full w-[85vw] max-w-[320px] bg-background z-[70] shadow-2xl transition-transform duration-300 ease-in-out overflow-y-auto",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >

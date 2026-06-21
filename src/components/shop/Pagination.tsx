@@ -12,7 +12,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }: Pa
   if (totalPages <= 1) return null;
 
   return (
-    <div className="flex items-center justify-center gap-2 mt-12">
+    <div className="flex flex-wrap items-center justify-center gap-1.5 md:gap-2 mt-12">
       <button
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
@@ -26,7 +26,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }: Pa
           key={page}
           onClick={() => onPageChange(page)}
           className={cn(
-            "w-10 h-10 rounded-lg font-semibold text-sm transition-all",
+            "w-8 h-8 md:w-10 md:h-10 rounded-lg font-semibold text-sm transition-all",
             page === currentPage
               ? "bg-primary text-on-primary shadow-lg"
               : "text-on-surface-variant hover:bg-surface-container-high"
