@@ -1,10 +1,6 @@
 import type { NextConfig } from "next";
 
-// Content-Security-Policy tuned for this app:
-// - self-hosted fonts (next/font) + Google Material Symbols icon font
-// - next/image (data: + the configured remote host)
-// - 'unsafe-inline'/'unsafe-eval' are required by Next.js + Turbopack (inline
-//   bootstrap scripts, React Refresh, HMR). Tightening to nonces is a future step.
+// Security headers — honored by Netlify's Next.js runtime (and any Node host).
 const csp = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
@@ -42,12 +38,7 @@ const nextConfig: NextConfig = {
     formats: ["image/webp", "image/avif"],
   },
   async headers() {
-    return [
-      {
-        source: "/:path*",
-        headers: securityHeaders,
-      },
-    ];
+    return [{ source: "/:path*", headers: securityHeaders }];
   },
 };
 

@@ -1,20 +1,22 @@
-"use client";
-
-import { use } from "react";
 import { notFound } from "next/navigation";
-import { getProductBySlug, getRelatedProducts } from "@/data/products";
+import { products, getProductBySlug, getRelatedProducts } from "@/data/products";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import ImageGallery from "@/components/product/ImageGallery";
 import ProductInfo from "@/components/product/ProductInfo";
 import ProductTabs from "@/components/product/ProductTabs";
 import RelatedProducts from "@/components/product/RelatedProducts";
 
-export default function ProductPage({
+// Pre-render every product page at build time (required for static export).
+export function generateStaticParams() {
+  return products.map((product) => ({ slug: product.slug }));
+}
+
+export default async function ProductPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  const { slug } = use(params);
+  const { slug } = await params;
   const product = getProductBySlug(slug);
 
   if (!product) {

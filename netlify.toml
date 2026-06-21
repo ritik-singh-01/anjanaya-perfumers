@@ -1,0 +1,13 @@
+# Netlify configuration for the Next.js app.
+# The official Next.js runtime handles SSR, image optimization, and next.config
+# headers automatically — no static export needed.
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
