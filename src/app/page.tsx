@@ -7,6 +7,7 @@ import TrustSection from "@/components/home/TrustSection";
 import CategoryGrid from "@/components/home/CategoryGrid";
 import ProductCarousel from "@/components/home/ProductCarousel";
 import SignatureAttar from "@/components/home/SignatureAttar";
+import HeritageBand from "@/components/home/HeritageBand";
 import VideoShowcase from "@/components/home/VideoShowcase";
 import FeaturedProducts from "@/components/home/FeaturedProducts";
 import Reveal from "@/components/ui/Reveal";
@@ -55,6 +56,9 @@ export default function HomePage() {
       {/* 5. Signature 3D attar moment */}
       <SignatureAttar />
 
+      {/* 5b. Heritage / craft story */}
+      <HeritageBand />
+
       {/* 6. Hawan samagri */}
       <ProductCarousel
         title={{ en: "Hawan Samagri", hi: "हवन सामग्री" }}
@@ -74,7 +78,7 @@ export default function HomePage() {
             <div className="grid grid-cols-1 overflow-hidden rounded-3xl bg-surface-container lg:grid-cols-2">
               <div className="relative min-h-[280px] lg:min-h-[440px]">
                 <Image
-                  src="/images/categories/pooja-essentials.jpg"
+                  src="/images/products-studio/5 ratan.jpg"
                   alt={t("Curated Pooja Kits", "क्यूरेटेड पूजा किट")}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"

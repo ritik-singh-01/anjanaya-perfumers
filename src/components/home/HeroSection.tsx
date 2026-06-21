@@ -34,7 +34,7 @@ const slides: Slide[] = [
     ctaHi: "संग्रह देखें",
   },
   {
-    image: "/images/categories/perfumes-attars.jpg",
+    image: "/images/products-studio/Attar box 24pcs.jpg",
     eyebrowEn: "Traditional Attars",
     eyebrowHi: "पारंपरिक अत्तर",
     titleEn: "Pure, alcohol-free fragrances",
@@ -46,7 +46,7 @@ const slides: Slide[] = [
     ctaHi: "अत्तर देखें",
   },
   {
-    image: "/images/categories/hawan-samagri.jpg",
+    image: "/images/products-studio/Hawan bala ji box.jpg",
     eyebrowEn: "Complete Pooja Samagri",
     eyebrowHi: "संपूर्ण पूजा सामग्री",
     titleEn: "Everything for your rituals",

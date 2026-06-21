@@ -14,6 +14,8 @@
     --error:#ba1a1a; --whatsapp:#25D366;
     --font-head:"Marcellus", Georgia, "Times New Roman", serif;
     --font-body:"Fira Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --ease-lux:cubic-bezier(.22,1,.36,1);
+    --shadow-lift:0 22px 48px -18px rgba(61,26,10,.28),0 10px 20px -12px rgba(61,26,10,.12);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--background);color:var(--on-surface);font-family:var(--font-body);line-height:1.5;-webkit-font-smoothing:antialiased}
@@ -42,7 +44,8 @@
   /* buttons */
   .row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
   .btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:14px 28px;font-weight:600;font-size:15px;border:0;cursor:pointer;font-family:var(--font-body)}
-  .btn-primary{background:var(--primary);color:#fff}
+  .btn-primary{background:var(--primary);color:#fff;box-shadow:0 8px 20px -8px rgba(167,52,0,.55);transition:transform .3s var(--ease-lux),box-shadow .3s var(--ease-lux)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 28px -10px rgba(167,52,0,.6)}
   .btn-ghost{background:transparent;color:var(--on-surface);border:1px solid var(--outline-variant)}
   .btn-wa{background:var(--whatsapp);color:#fff}
   /* badges */
@@ -53,7 +56,8 @@
   .b-sold{background:#e3d9cb;color:#5c4037}
   /* product card */
   .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:24px}
-  .pcard .img{aspect-ratio:4/5;border-radius:14px;background:linear-gradient(135deg,#f1e7d9,#e5beb2);position:relative;overflow:hidden}
+  .pcard .img{aspect-ratio:4/5;border-radius:16px;background:linear-gradient(135deg,#f1e7d9,#e5beb2);position:relative;overflow:hidden;cursor:pointer;box-shadow:0 1px 3px rgba(61,26,10,.08);transition:transform .4s var(--ease-lux),box-shadow .4s var(--ease-lux)}
+  .pcard .img:hover{transform:translateY(-6px);box-shadow:var(--shadow-lift)}
   .pcard .img .b{position:absolute;top:12px;left:12px}
   .pcard .cat{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--primary);font-weight:700;margin-top:12px}
   .pcard .nm{font-family:var(--font-head);font-size:17px;margin-top:4px}
@@ -62,7 +66,8 @@
   .pcard .pr s{color:var(--on-surface-variant);font-weight:400;margin-left:8px}
   .pcard .stars{color:var(--secondary-container);margin-top:4px;font-size:13px}
   /* category tile */
-  .ctile{aspect-ratio:4/5;border-radius:16px;background:linear-gradient(160deg,#7a3a0e,#3d1a0a);position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:18px;color:#fff;max-width:240px}
+  .ctile{aspect-ratio:4/5;border-radius:16px;background:linear-gradient(160deg,#7a3a0e,#3d1a0a);position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:18px;color:#fff;max-width:240px;cursor:pointer;transition:transform .4s var(--ease-lux),box-shadow .4s var(--ease-lux)}
+  .ctile:hover{transform:translateY(-6px);box-shadow:var(--shadow-lift)}
   .ctile h3{font-family:var(--font-head);font-size:22px}
   /* navbar */
   .nav{border:1px solid var(--outline-variant);border-radius:16px;overflow:hidden}
@@ -87,7 +92,7 @@
 <body>
 <div class="wrap">
   <div class="head">
-    <div class="eyebrow">Shri Anjaneya · श्री अंजनेय</div>
+    <div class="eyebrow" style="display:flex;align-items:center;gap:12px"><span style="width:32px;height:1px;background:var(--primary)"></span>Shri Anjaneya · श्री अंजनेय</div>
     <h1>Design System,<br><span class="accent">crafted with devotion</span></h1>
     <p>The visual language of Shri Anjaneya — traditional attars &amp; pooja samagri from Kannauj. Marcellus for headings, Fira Sans for body, on a warm terracotta-on-cream palette.</p>
   </div>
@@ -138,6 +143,34 @@
       <span class="badge b-best">Bestseller</span>
       <span class="badge b-sold">Sold Out</span>
     </div></div>
+  </section>
+
+  <section>
+    <h2 class="sec">Section Header Pattern</h2>
+    <div class="card-box" style="text-align:center;padding:48px 26px">
+      <div class="eyebrow">Our Range</div>
+      <div style="font-family:var(--font-head);font-size:44px;line-height:1.06;margin-top:6px">Sacred Collections</div>
+      <div style="width:64px;height:1px;background:rgba(167,52,0,.5);margin:20px auto 0"></div>
+    </div>
+    <p class="note">Editorial rhythm repeated across the site — a spaced terracotta <strong>eyebrow</strong> → a large Marcellus <strong>title</strong> → a thin hairline rule. Calm, curated, premium.</p>
+  </section>
+
+  <section>
+    <h2 class="sec">Motion &amp; Elevation</h2>
+    <div class="card-box">
+      <div class="row" style="gap:32px;align-items:flex-start">
+        <div style="text-align:center">
+          <div class="ctile" style="max-width:190px;margin-bottom:10px"><h3>Hover me</h3></div>
+          <div class="note" style="margin:0">Tactile card lift</div>
+        </div>
+        <div style="flex:1;min-width:240px">
+          <div class="lbl" style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--on-surface-variant)">Easing curve</div>
+          <div style="font-family:ui-monospace,monospace;font-size:13px;margin:4px 0 18px">cubic-bezier(.22, 1, .36, 1)</div>
+          <div class="lbl" style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--on-surface-variant)">On hover</div>
+          <div style="font-size:14px;color:var(--on-surface-variant);margin-top:4px;line-height:1.55">translateY(&minus;6px) with a soft layered shadow over 0.4s — applied to every product &amp; category card. Slow and purposeful: motion as choreography, not decoration.</div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section>
