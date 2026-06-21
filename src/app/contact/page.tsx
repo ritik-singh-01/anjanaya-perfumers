@@ -3,6 +3,7 @@
 import { useLanguage } from "@/context/LanguageContext";
 import { siteConfig } from "@/lib/siteConfig";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import Reveal from "@/components/ui/Reveal";
 
 export default function ContactPage() {
   const { t } = useLanguage();
@@ -11,13 +12,15 @@ export default function ContactPage() {
     <div className="max-w-4xl mx-auto px-4 md:px-6 py-6 md:py-10">
       <Breadcrumb items={[{ label: t("Contact Us", "संपर्क करें") }]} />
 
-      <h1 className="text-3xl md:text-5xl display-serif mb-8 tracking-tight">
-        {t("Contact Us", "संपर्क करें")}
-      </h1>
+      <Reveal>
+        <h1 className="text-3xl md:text-5xl display-serif mb-8 tracking-tight">
+          {t("Contact Us", "संपर्क करें")}
+        </h1>
+      </Reveal>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Contact Info */}
-        <div className="space-y-6">
+        <Reveal className="space-y-6">
           <p className="text-on-surface-variant text-lg leading-relaxed">
             {t(
               "Have a question about our products? Need help choosing the right pooja samagri? We are here to help!",
@@ -59,10 +62,10 @@ export default function ContactPage() {
               {t("Sunday: 10:00 AM – 2:00 PM", "रविवार: सुबह 10:00 – दोपहर 2:00")}
             </p>
           </div>
-        </div>
+        </Reveal>
 
         {/* Quick Actions */}
-        <div className="space-y-6">
+        <Reveal delay={0.1} className="space-y-6">
           <div className="bg-surface-container-low rounded-2xl p-8">
             <h2 className="text-xl display-serif mb-6">
               {t("Quick Actions", "त्वरित कार्यवाही")}
@@ -121,7 +124,7 @@ export default function ContactPage() {
               {t("Phone:", "फ़ोन:")} {siteConfig.phone}
             </p>
           </div>
-        </div>
+        </Reveal>
       </div>
     </div>
   );

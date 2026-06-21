@@ -8,6 +8,7 @@ import CategoryGrid from "@/components/home/CategoryGrid";
 import ProductCarousel from "@/components/home/ProductCarousel";
 import SignatureAttar from "@/components/home/SignatureAttar";
 import HeritageBand from "@/components/home/HeritageBand";
+import FeaturedCollection from "@/components/home/FeaturedCollection";
 import VideoShowcase from "@/components/home/VideoShowcase";
 import FeaturedProducts from "@/components/home/FeaturedProducts";
 import Reveal from "@/components/ui/Reveal";
@@ -21,6 +22,16 @@ export default function HomePage() {
   const hawan = products.filter((p) => p.subcategory === "hawan-samagri");
   const dhoop = products.filter((p) => p.subcategory === "dhoop-agarbatti");
   const bestsellers = getBestsellers();
+  // Editor's Picks: one product per subcategory so the edit looks curated/varied
+  const featuredSeen = new Set<string>();
+  const featured = [...bestsellers, ...attars]
+    .filter((p) => {
+      const key = p.subcategory || p.id;
+      if (featuredSeen.has(key)) return false;
+      featuredSeen.add(key);
+      return true;
+    })
+    .slice(0, 5);
 
   return (
     <>
@@ -32,6 +43,9 @@ export default function HomePage() {
 
       {/* 3. Category gallery */}
       <CategoryGrid />
+
+      {/* 3a. Featured collection — editorial spotlight */}
+      <FeaturedCollection products={featured} />
 
       {/* 3b. Rituals video band — video-ready (drop /videos/ritual.mp4 + set videoSrc) */}
       <VideoShowcase

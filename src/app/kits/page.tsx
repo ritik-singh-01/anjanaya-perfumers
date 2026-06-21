@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { siteConfig } from "@/lib/siteConfig";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import Reveal from "@/components/ui/Reveal";
 
 const kits = [
   { name: "Daily Pooja Kit", nameHi: "दैनिक पूजा किट", price: "₹299/month", items: "Agarbatti, Dhoop, Kapoor, Kumkum, Roli", icon: "wb_sunny" },
@@ -21,22 +22,24 @@ export default function KitsPage() {
     <div className="max-w-6xl mx-auto px-4 md:px-6 py-6 md:py-10">
       <Breadcrumb items={[{ label: t("Curated Pooja Kits", "पूजा किट") }]} />
 
-      <div className="text-center mb-12">
-        <h1 className="text-3xl md:text-5xl display-serif mb-4 tracking-tight">
-          {t("Curated Pooja Kits", "क्यूरेटेड पूजा किट")}
-        </h1>
-        <p className="text-on-surface-variant text-lg max-w-2xl mx-auto">
-          {t(
-            "Complete pooja kits so you never miss a single item. Curated by our experts for every occasion — from daily worship to grand festivals.",
-            "पूर्ण पूजा किट ताकि आप कोई भी सामान न भूलें। दैनिक पूजा से लेकर भव्य त्यौहारों तक — हमारे विशेषज्ञों द्वारा तैयार।"
-          )}
-        </p>
-      </div>
+      <Reveal>
+        <div className="text-center mb-12">
+          <h1 className="text-3xl md:text-5xl display-serif mb-4 tracking-tight">
+            {t("Curated Pooja Kits", "क्यूरेटेड पूजा किट")}
+          </h1>
+          <p className="text-on-surface-variant text-lg max-w-2xl mx-auto">
+            {t(
+              "Complete pooja kits so you never miss a single item. Curated by our experts for every occasion — from daily worship to grand festivals.",
+              "पूर्ण पूजा किट ताकि आप कोई भी सामान न भूलें। दैनिक पूजा से लेकर भव्य त्यौहारों तक — हमारे विशेषज्ञों द्वारा तैयार।"
+            )}
+          </p>
+        </div>
+      </Reveal>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-        {kits.map((kit) => (
+        {kits.map((kit, i) => (
+          <Reveal key={kit.name} delay={Math.min(i * 0.07, 0.42)}>
           <div
-            key={kit.name}
             className="bg-surface-container-low rounded-2xl p-6 border border-outline-variant/10 hover:shadow-lg hover:border-primary/20 transition-all"
           >
             <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4">
@@ -59,10 +62,12 @@ export default function KitsPage() {
               {t("Enquire about this Kit", "इस किट के बारे में पूछें")}
             </a>
           </div>
+          </Reveal>
         ))}
       </div>
 
       {/* Custom Kit CTA */}
+      <Reveal>
       <div className="bg-primary rounded-2xl p-8 md:p-12 text-center text-on-primary">
         <h2 className="text-2xl md:text-3xl display-serif mb-4">
           {t("Build Your Own Custom Kit", "अपनी कस्टम किट बनाएँ")}
@@ -83,12 +88,15 @@ export default function KitsPage() {
           {t("Chat with Expert", "विशेषज्ञ से बात करें")}
         </a>
       </div>
+      </Reveal>
 
-      <div className="mt-8 text-center">
-        <Link href="/shop" className="text-primary font-semibold hover:underline">
-          {t("← Browse all products individually", "← सभी उत्पाद अलग-अलग देखें")}
-        </Link>
-      </div>
+      <Reveal>
+        <div className="mt-8 text-center">
+          <Link href="/shop" className="text-primary font-semibold hover:underline">
+            {t("← Browse all products individually", "← सभी उत्पाद अलग-अलग देखें")}
+          </Link>
+        </div>
+      </Reveal>
     </div>
   );
 }

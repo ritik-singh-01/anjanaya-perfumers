@@ -10,6 +10,35 @@ export default function Footer() {
 
   return (
     <footer className="bg-on-surface text-inverse-on-surface">
+      {/* Invitation band */}
+      <div className="border-b border-inverse-on-surface/10">
+        <div className="max-w-7xl mx-auto px-6 py-14 md:py-16 flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+          <div className="max-w-xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-inverse-primary mb-3">
+              {t("Shri Anjaneya", "श्री अंजनेय")}
+            </p>
+            <h2 className="display-serif text-3xl md:text-4xl text-inverse-on-surface">
+              {t("Bring home the fragrance of devotion", "भक्ति की सुगंध घर लाएँ")}
+            </h2>
+            <p className="mt-4 leading-relaxed text-inverse-on-surface/70">
+              {t(
+                "Tell us what your pooja needs and our team will guide you personally — on WhatsApp, in minutes.",
+                "हमें अपनी पूजा की ज़रूरत बताएं और हमारी टीम व्हाट्सएप पर मिनटों में आपका मार्गदर्शन करेगी।"
+              )}
+            </p>
+          </div>
+          <a
+            href={`https://wa.me/${siteConfig.whatsapp}?text=Hi!%20I%20want%20to%20know%20more%20about%20Shri%20Anjaneya`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-whatsapp px-8 py-4 font-bold text-white shadow-lg shadow-black/25 transition-all hover:opacity-90 active:scale-95"
+          >
+            <span className="material-symbols-outlined">chat</span>
+            {t("Enquire on WhatsApp", "व्हाट्सएप पर पूछें")}
+          </a>
+        </div>
+      </div>
+
       {/* Main footer */}
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -109,17 +138,6 @@ export default function Footer() {
                 </span>
               </li>
             </ul>
-
-            {/* WhatsApp CTA */}
-            <a
-              href={`https://wa.me/${siteConfig.whatsapp}?text=Hi!%20I%20want%20to%20know%20more%20about%20Shri%20Anjaneya`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 flex items-center justify-center gap-2 bg-whatsapp text-white py-2.5 rounded-lg font-bold text-sm w-full hover:opacity-90 transition-opacity"
-            >
-              <span className="material-symbols-outlined text-sm">chat</span>
-              {t("Chat on WhatsApp", "व्हाट्सएप पर बात करें")}
-            </a>
           </div>
         </div>
       </div>

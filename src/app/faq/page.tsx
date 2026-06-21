@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import Reveal from "@/components/ui/Reveal";
 
 export const metadata: Metadata = {
   title: "FAQ — Attars & Pooja Samagri",
@@ -69,22 +70,25 @@ export default function FAQPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Breadcrumb items={[{ label: "FAQ" }]} />
-      <h1 className="display-serif mb-3 text-4xl md:text-5xl">Frequently Asked Questions</h1>
-      <p className="mb-8 text-on-surface-variant">
-        Everything you might want to know about our attars and pooja samagri. Still curious?{" "}
-        <a
-          href="https://wa.me/918169638918?text=Hi!%20I%20have%20a%20question%20about%20Shri%20Anjaneya."
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-medium text-primary hover:underline"
-        >
-          Ask us on WhatsApp
-        </a>
-        .
-      </p>
+      <Reveal>
+        <h1 className="display-serif mb-3 text-4xl md:text-5xl">Frequently Asked Questions</h1>
+        <p className="mb-8 text-on-surface-variant">
+          Everything you might want to know about our attars and pooja samagri. Still curious?{" "}
+          <a
+            href="https://wa.me/918169638918?text=Hi!%20I%20have%20a%20question%20about%20Shri%20Anjaneya."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-primary hover:underline"
+          >
+            Ask us on WhatsApp
+          </a>
+          .
+        </p>
+      </Reveal>
       <div className="divide-y divide-outline-variant/20">
         {faqs.map((f, i) => (
-          <details key={i} className="group py-5">
+          <Reveal key={i} delay={Math.min(i * 0.07, 0.42)}>
+          <details className="group py-5">
             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-medium text-on-surface">
               {f.q}
               <span className="material-symbols-outlined text-primary transition-transform group-open:rotate-45">
@@ -93,6 +97,7 @@ export default function FAQPage() {
             </summary>
             <p className="mt-3 leading-relaxed text-on-surface-variant">{f.a}</p>
           </details>
+          </Reveal>
         ))}
       </div>
     </div>
